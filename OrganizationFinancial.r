@@ -1,3 +1,14 @@
+#Assess the Financial Statement of an Organization being supplied with 2 vectors of data:
+ #Monthly Revenue and Monthly Expenses for the Financial Year. You can create your own
+ #sample data vector for this experiment) Calculate the following financial metrics:
+ #a. Profit for each month.
+ #b. Profit after tax for each month (Tax Rate is 30%).
+ #c. Profit margin for each month equals to profit after tax divided by revenue.
+ #d. Good Months– where the profit after tax was greater than the mean for the year.
+ #e. Bad Months– where the profit after tax was less than the mean for the year.
+ #f. The best month– where the profit after tax was max for the year.
+ #g. The worst month– where the profit after tax was min for the year
+ 
  # Vector of month names
  month_names <- c("January", "February", "March", "April", "May", "June", "July", "August",
  "September", "October", "November", "December")
@@ -58,7 +69,7 @@ Good_Month = good_month_labels,
  # Print the best and worst month messages to the screen
  cat(best_month_message, "\n")
  cat(worst_month_message, "\n")
- 
+
  # Create a CSV file for the data
  write.csv(results, file = "financial_statement.csv", row.names = FALSE)
  cat("\nA CSV file by the name financial_statement.csv is created in your current folder\n\n")
